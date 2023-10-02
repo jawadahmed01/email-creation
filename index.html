@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Email Template</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<style type="text/css">
+	
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+  color: var(--white)
+}
+
+li {
+  list-style: none;
+}
+/* ==============================
+   Color Styling
+================================= */
+:root {
+  --pri: #C75000;
+  --sec: #EDAD01;
+  --black: #131313;
+  --white: #ffffff;
+}
+/* ==============================
+   Typography Styling
+================================= */
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: -2%;
+  color: var(--white);
+}
+h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 32px;
+  color: var(--white);
+}
+p{
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 500;
+}
+.p-12px {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: var(--white);
+}
+/* ==============================
+   Container & Section
+================================= */
+.container {
+  max-width: 650px;
+  margin: auto;
+  padding: 0px 8px;
+}
+section {
+  padding: 30px 0px;
+  background-color: var(--pri);
+  margin: 40px 10px;
+  overflow-x: hidden;
+}
+
+/* ==============================
+   Flex And Grid Styling
+================================= */
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+/* ==============================
+   Columns Styling
+================================= */
+.col {
+  flex-basis: 100%;
+  min-width: 300px;
+}
+.col-2 {
+  flex-basis: 50%;
+  min-width: 300px;
+}
+/* ==============================
+  All Button Styling
+================================= */
+.pri-btn {
+  border: 1px solid transparent;
+  padding: 16px 35px;
+  color: var(--black);
+  background: var(--sec);
+  transition: 0.3s ease-in-out;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.pri-btn:hover {
+  border: 1px solid var(--sec);
+  color: var(--white);
+  background-color: transparent;
+}
+/* ==============================
+   Spacing Styling
+================================= */
+.sm-m {
+  margin-bottom: 20px;
+}
+.md-m {
+  margin-bottom: 30px;
+}
+.lg-m {
+  margin-bottom: 40px;
+}
+.xl-m {
+  margin-bottom: 70px;
+}
+
+/*Common style*/
+.banner-image{
+  flex-direction: column;
+  position: relative;
+  z-index: 1 !important;
+}
+.banner-image img{
+  object-fit: cover;
+  object-position: center;
+}
+.banner-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  text-align: center;
+  padding: 0px 50px;
+}
+.logo{
+  margin: auto;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+.logo img{
+  max-width: 281px;
+  cursor: pointer;
+}
+.body-white-section{
+  background-color:#F3F4E5;
+  border-radius: 30px;
+  text-align: center;
+  padding: 30px 20px;
+  overflow-x: hidden;
+  margin-top: -110px;
+  z-index: 99 !important;
+  position: relative;
+}
+.body-white-section h2{
+  color: var(--black);
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  margin-top: 15px;
+}
+.footer{
+  max-width: 510px;
+  margin: auto;
+  text-align: center;
+  padding-top: 30px;
+}
+.logo-footer{
+  max-width: 281px;
+  margin: auto;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.footer a{
+  text-decoration: underline;
+  margin-bottom: 15px;
+}
+#boddy-image-wrap{
+  gap:30px;
+}
+#black-color{
+  color: var(--black);
+}
+.left-text{
+    margin-left: 30px;
+}
+.right-text{
+  margin-right: 70px;
+}
+@media only screen and (max-width: 590px) {
+.body-white-section{
+  margin-top: -70px !important;
+}
+.banner-image{
+  padding: 0px 0px;
+}
+p {
+  font-size: 13px;
+  line-height: 20px;
+}
+h1 {
+    font-size: 28px;
+    line-height: 38px;
+}
+h2 {
+    font-size: 18px;
+    line-height: 26px;
+}
+.logo img{
+  max-width: 180px;
+}
+.logo-footer{
+  max-width: 180px;
+}
+/* =================================================================================================
+   Responsive Design in 440px
+================================================================================================== */
+@media only screen and (max-width: 490px) {
+.banner-content{
+  padding: 0px 20px;
+}
+
+
+.banner-image img{
+  height: 500px;
+}
+
+p {
+  font-size: 13px;
+  line-height: 20px;
+}
+h1 {
+    font-size: 22px;
+    line-height: 32px;
+}
+h2 {
+    font-size: 16px;
+    line-height: 26px;
+}
+.body-white-section h2{
+  font-size: 16px;
+  line-height: 30px;
+}
+.banner-image{
+  padding: 0px 0px;
+}
+  /* ==============================
+       Columns Styling
+================================= */
+ .row {
+    flex-wrap: wrap;
+  }
+  .col-2 {
+    flex-basis: 100%;
+  }
+  /* ==============================
+  All Button Styling
+================================= */
+.pri-btn {
+  padding: 12px 25px;
+  font-size: 13px;
+  line-height: 18px;
+}
+.container {
+  padding: 0px 5px;
+}
+section {
+  margin: 30px 5px;
+  overflow-x: hidden;
+}
+.left-text{
+    margin-left: 0px;
+}
+.right-text{
+  margin-right: 0px;
+}
+.right-img {
+    margin-right: -120px;
+}
+.left-img {
+    margin-left: -30px;
+}
+.body-white-section {
+    margin-top: -220px;
+}
+}
+/* =================================================================================================
+   Responsive Design in 440px
+================================================================================================== */
+@media only screen and (max-width: 390px) {
+.body-white-section{
+  margin-top: -30px !important;
+}
+.banner-content{
+  padding: 0px 10px;
+}
+}
+
+
+</style>
+<body>
+	<section>
+		<div class="container">
+			<div class="col logo"><a href="https://audiobookstore.com/"><img src="images/logo.svg"></a></div>
+			<div class="row banner-image">
+				<div class="banner-background-bg">
+					<img src="images/banner.png">
+				</div>
+				<div class="col banner-content">
+					<h1 class="sm-m">Start Listening to Over 100 Million Podcast Episodes Instantly!</h1>
+					<h2 class="lg-m">Unlock our HUGE selection of over 100 million podcast episodes by choosing between two options catered to your specific listening needs.</h2>
+				    <a href="https://audiobookstore.com/save-with-flexpass.aspx?utm_campaign=podcast-upgrade-email&utm_medium=email&utm_source=website"><button class="pri-btn">Learn more ➝</button></a>
+				</div>
+			</div>
+			<!-- Next Section -->
+			<div class="body-white-section">
+			<div class="row md-m">
+				<div class="col">
+					<p>Unlock the Podcast section of our iOS and Android apps instantly by UPGRADING to a FlexPass™ account, or enrolling in our new Podcast Only membership for just $3.95 per month. Either option gets you anytime access to stream OR download over 100 million podcast episodes, all within the same app you already use to listen to audiobooks.</p>
+				</div>
+			</div>
+			<!-- Next Row -->
+			<div class="row md-m" id="boddy-image-wrap">
+				<div class="col-2">
+					<img class="left-img" src="images/left_img.png">
+					<h2 class="left-text">FlexPass membership<br><b>$9.95/month</b></h2>
+				</div>
+				<div class="col-2">
+					<img class="right-img" src="images/right_img.png">
+					<h2 class="right-text">PodCast-only membership<br><b>$9.95/month</b></h2>
+				</div>
+			</div>
+			<!-- Btn -->
+			<a href="https://audiobookstore.com/podcast-subscribe.aspx?utm_campaign=podcast-upgrade-email&utm_medium=email&utm_source=website"><button class="pri-btn" id="black-color">Learn more ➝</button></a>
+			</div>
+			<!-- Next Section -->
+			<div class="col footer">
+				<a href="https://audiobookstore.com/"><img class="logo-footer" src="images/logo.svg"></a>
+				<p class="p-12px">This email was sent by updates@audiobookstore.com to deilers@audiobookstore.com Not interested? <a href="https://xmuaoe-zgpvh.maillist-manage.net/ua/orgoptout?od=3z646f6c8fe67a1317b9cefae5be3f55ff4ff11a0138025bdaa4e615b3d9b7e4b1&rd=1dfbb16790da52f9&sd=1dfbb16790da73f1&n=11699e4c2286e3c">Unsubscribe</a> | <a href="https://xmuaoe-zgpvh.maillist-manage.net/ua/commpref?od=3z646f6c8fe67a1317b9cefae5be3f55ff4ff11a0138025bdaa4e615b3d9b7e4b1&rd=1dfbb16790da52f9&sd=1dfbb16790da73f1&n=11699e4c2286e3c">Manage Preference</a></p>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
